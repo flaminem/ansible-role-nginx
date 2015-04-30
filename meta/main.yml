@@ -1,7 +1,6 @@
 ---
 galaxy_info:
-  author: "Benno Joy, DAUPHANT Julien"
-  company: AnsibleWorks
+  author: "DAUPHANT Julien"
   license: BSD
   min_ansible_version: 1.4
   platforms:
@@ -14,13 +13,16 @@ galaxy_info:
       - 16
       - 17
       - 18
+      - 19
+      - 20
    - name: Ubuntu
      versions:
       - precise
       - quantal
       - raring
       - saucy
+      - trusty
   categories:
    - web
 dependencies: []
-  
+
