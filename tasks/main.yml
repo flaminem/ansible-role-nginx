@@ -60,6 +60,13 @@
    - reload nginx
   tags: [configuration,nginx]
 
+- name: Remove links for disabled sites
+  file: state=absent dest=/etc/nginx/sites-enabled/{{ item }}.conf
+  with_items: nginx_disabled_sites.keys()
+  notify:
+   - reload nginx
+  tags: [configuration,nginx,clean,mymy]
+
 - name: Create the configurations for independent config file
   template: src=config.conf.j2 dest=/etc/nginx/conf.d/{{ item }}.conf
   with_items: nginx_configs.keys()

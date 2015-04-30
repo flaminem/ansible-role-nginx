@@ -21,6 +21,8 @@ nginx_http_params:
   - error_log "{{nginx_log_dir}}/error.log"
   - server_tokens off
 
+nginx_disabled_sites: {}
+
 nginx_sites:
   default:
      - listen 80
