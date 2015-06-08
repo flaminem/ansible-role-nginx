@@ -6,6 +6,8 @@
 - include: remove-extras.yml
   when: keep_only_specified
 - include: remove-unwanted.yml
+- include: logjam-fix.yml
+  when: nginx_fix_logjam
 - include: configuration.yml
 
 - name: Start the nginx service
