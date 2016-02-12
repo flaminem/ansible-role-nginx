@@ -24,6 +24,6 @@
 - name: Install the nginx packages
   apt: name={{ item }} state=present update_cache=yes
   with_items: ubuntu_pkg
-  environment: env
+  environment: '{{ nginx_environment }}'
   when: ansible_os_family == "Debian"
   tags: [packages,nginx]
